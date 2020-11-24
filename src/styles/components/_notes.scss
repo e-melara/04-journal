@@ -41,6 +41,13 @@
  resize: none;
 }
 
+.notes__images {
+ overflow: hidden;
+ max-width: 300px;
+ max-height: 300px;
+}
+
 .notes__images img {
+ width: 100%;
  box-shadow: 5px 5px $dark-grey;
 }

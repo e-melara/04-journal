@@ -1,4 +1,5 @@
 import { authTypes } from "../types/authTypes";
+import { noteStartLogout } from "./notesActions";
 import { startLoading, finishLoading } from "../actions/errorActions";
 import { firebase, googleProvider } from "../firebase/firebase-config";
 
@@ -50,6 +51,7 @@ export const startlogoutActions = () => {
  return async (dispatch) => {
   await firebase.auth().signOut();
   dispatch(logout());
+  dispatch(noteStartLogout());
  };
 };
 
